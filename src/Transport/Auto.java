@@ -14,7 +14,7 @@ public  class Auto {
     public String getCountry() {
         return country;
     }
-    
+
     public String getModel() {
         return model;
     }
@@ -76,7 +76,7 @@ public  class Auto {
     }
 
     public void switchRubber() {
-        setSummerRubber (!this.isSummerRubber);
+        setSummerRubber(!this.isSummerRubber);
     }
 
     private void setSummerRubber(boolean b) {
@@ -87,7 +87,7 @@ public  class Auto {
     private final int year;
     private final String country;
     private final String color;
-    private final  String bodyType;
+    private final String bodyType;
     private final double engineVolume;
     private boolean isSummerRubber;
     private static final String noInfo = "Информация не указана";
@@ -95,27 +95,35 @@ public  class Auto {
     private String transmission;
     private String number;
     private int seatCount;
-    
+
 
     private Key key;
     private Insurance insurance;
 
-    public Auto(String brand, String model,int year, String country,String color,String bodyType,boolean isSummerRubber,
-                String transmission,String number,int seatCount,double engineVolume){
+    public Auto(String brand, String model, int year, String country, String color, String bodyType, boolean isSummerRubber,
+                String transmission, String number, int seatCount, double engineVolume) {
 
-    if(brand==null || brand.isEmpty()) this.brand  = noInfo; else this.brand  = brand;
-        if(model == null || model.isEmpty()) this.model = noInfo; else this.model = model;
-        if(engineVolume<=0) this.engineVolume = 1.5; else this.engineVolume = engineVolume;
-        if(color == null || color.isEmpty()) this.color = "белый"; else this.color = color;
-        if(year<=0) this.year = 2000; else this.year = year;
-        if(country==null || country.isEmpty()) this.country = noInfo; else this.country  = country;
-        if (bodyType == null || bodyType.isEmpty()) this.bodyType = noInfo; else this.bodyType = bodyType;
+        if (brand == null || brand.isEmpty()) this.brand = noInfo;
+        else this.brand = brand;
+        if (model == null || model.isEmpty()) this.model = noInfo;
+        else this.model = model;
+        if (engineVolume <= 0) this.engineVolume = 1.5;
+        else this.engineVolume = engineVolume;
+        if (color == null || color.isEmpty()) this.color = "белый";
+        else this.color = color;
+        if (year <= 0) this.year = 2000;
+        else this.year = year;
+        if (country == null || country.isEmpty()) this.country = noInfo;
+        else this.country = country;
+        if (bodyType == null || bodyType.isEmpty()) this.bodyType = noInfo;
+        else this.bodyType = bodyType;
     }
 
     @Override
-    public  String toString(){
-        return brand +" " +model+", " +year+" года выпуска, сборка в "+country+", " +color+" цвет кузова, объём двигателя -" +engineVolume+" л.";
+    public String toString() {
+        return brand + " " + model + ", " + year + " года выпуска, сборка в " + country + ", " + color + " цвет кузова, объём двигателя -" + engineVolume + " л.";
     }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) return false;
@@ -126,9 +134,31 @@ public  class Auto {
         }
         return true;
     }
+
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return java.util.Objects.hash(brand, engineVolume, model, color, country, year);
     }
+
+    public void setCarNumber() {
+    }
+
+    public void buyInsurance() {
+    }
+
+    public boolean getCarNumber() {
+        return false;
+    }
+
+    public boolean infoAboutInsurance() {
+        return false;
+    }
+
+    public boolean checkInsurance() {
+        return false;
+    }
+
+
 }
+
 
