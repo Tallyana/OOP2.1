@@ -4,6 +4,7 @@ public class Human {
     private int birthday;
 
     public String getCityOfResidence() {
+
         return cityOfResidence;
     }
 
